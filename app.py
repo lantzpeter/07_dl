@@ -8,8 +8,11 @@ from sklearn.metrics.pairwise import cosine_similarity
 from google import genai
 from google.genai import types
 
+#Loading key for Google AI
+api_key = st.secrets["API_KEY"]
+
 #Initiating GenAi model from Google.
-client = genai.Client(api_key=os.getenv("API_KEY"))
+client = genai.Client(api_key=api_key)
 
 #Loading model
 model = SentenceTransformer("model/my_model")

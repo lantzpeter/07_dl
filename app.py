@@ -5,7 +5,7 @@ import random
 import os
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
-from google import genai
+import google.generativeai as genai
 from google.genai import types
 
 #Loading key for Google AI

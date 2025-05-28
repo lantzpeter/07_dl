@@ -118,16 +118,19 @@ st.text("Be prepared to learn, young hobbit. Ask your question below 👇")
 
 query = st.text_input("Ask your question:")
 
-if query:
-    st.markdown("---")
-    st.markdown("### Gandalf says:")
-    response = generate_response(
-        system_prompt,
-        query,
-        texts_combined,
-        embeddings_combined,
-        model,
-        client,
-        texts_lotr
-    )
-    st.write(response)
+if st.button("One click to rule them all"):
+    if query:
+        st.markdown("---")
+        st.markdown("### Gandalf says:")
+        response = generate_response(
+            system_prompt,
+            query,
+            texts_combined,
+            embeddings_combined,
+            model,
+            client,
+            texts_lotr
+        )
+        st.write(response)
+    else:
+            st.warning("You must enter a questions first.")
